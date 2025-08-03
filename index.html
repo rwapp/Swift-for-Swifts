@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Swift For Swifts" />
+    <meta name="generator" content="Ignite v0.6.0" />
+    <title>Home – Swift For Swifts</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="/css/ignite-core.min.css" rel="stylesheet" />
+    <link href="https://www.swiftforswifts.org/" rel="canonical" />
+    <script>(function() {
+    function getThemePreference() {
+        return localStorage.getItem('custom-theme') || 'auto';
+    }
+
+    function applyTheme(themeID) {
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const lightThemeID = document.documentElement.getAttribute('data-light-theme') || 'light';
+        const darkThemeID = document.documentElement.getAttribute('data-dark-theme') || 'dark';
+        const actualThemeID = themeID === 'auto' ? (prefersDark ? darkThemeID : lightThemeID) : themeID;
+
+        document.documentElement.setAttribute('data-bs-theme', actualThemeID);
+        document.documentElement.setAttribute('data-theme-state', themeID);
+    }
+
+    function applySyntaxTheme() {
+        const syntaxTheme = getComputedStyle(document.documentElement)
+            .getPropertyValue('--syntax-highlight-theme').trim().replace(/"/g, '');
+
+        if (!syntaxTheme) return;
+
+        document.querySelectorAll('link[data-highlight-theme]').forEach(link => {
+            link.setAttribute('disabled', 'disabled');
+        });
+
+        const themeLink = document.querySelector(`link[data-highlight-theme="${syntaxTheme}"]`);
+        if (themeLink) {
+            themeLink.removeAttribute('disabled');
+        }
+    }
+
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        const currentTheme = getThemePreference();
+        if (currentTheme === 'auto') {
+            applyTheme('auto');
+            applySyntaxTheme();
+        }
+    });
+
+    const savedTheme = getThemePreference();
+    applyTheme(savedTheme);
+    applySyntaxTheme();
+})();
+</script>
+    <meta property="og:site_name" content="Swift For Swifts" />
+    <meta property="og:title" content="Home" />
+    <meta name="twitter:title" content="Home" />
+    <meta property="og:url" content="https://www.swiftforswifts.org/" />
+    <meta name="twitter:domain" content="swiftforswifts.org" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:dnt" content="on" />
+  </head>
+  <body style="background-color: rgb(240 248 255 / 100%);" class="container">
+    <header>
+      <nav class="fixed-top material-thick navbar navbar-expand-md">
+        <div class="container flex-wrap flex-lg-nowrap">
+          <div class="me-2 me-md-auto">
+            <a href="/" class="d-inline-flex align-items-center navbar-brand">Swift for Swifts</a>
+          </div>
+          <button type="button" class="navbar-toggler btn" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="navbar-nav mb-2 mb-md-0 col justify-content-end">
+              <li class="nav-item"><a href="/donate" class="nav-link text-nowrap">Donate</a></li>
+              <li class="nav-item"><a href="/action" class="nav-link text-nowrap">Take Action</a></li>
+              <li class="nav-item"><a href="/involved" class="nav-link text-nowrap">Get involved</a></li>
+              <li class="nav-item"><a href="/support" class="nav-link text-nowrap">Show support</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="ig-main-content">
+      <div style="width: 100vw; margin-inline: calc(50% - 50vw); padding-bottom: 20px; display: grid">
+        <div class="mb-0 vstack" style="width: 100.0vw; height: 60.0vh; overflow: hidden; position: relative; grid-area: 1/1; z-index: 0; align-self: flex-end; justify-self: center">
+          <img src="/images/swift-header.jpg" alt="" class="img-fluid w-100 h-100 object-fit-cover mb-0 align-self-center" style="object-position: 50% 50%" />
+        </div>
+        <div class="material-thick mb-0 vstack" style="width: 100%; max-width: 100.0vw; position: relative; grid-area: 1/1; z-index: 1; align-self: flex-end; justify-self: center">
+          <p class="p-1 mb-0 align-self-center" style="font-weight: 400; font-size: 3.0em">Swift for Swifts</p>
+          <code class="fs-5 pb-1 mb-0 align-self-center">Write code, help the environment</code>
+        </div>
+      </div>
+      <p style="padding-top: 20px; padding-bottom: 20px"></p>
+      <p>Swift is a <a href="https://swift.org">powerful, fast, and safe language</a>— capable of building everything from tiny microcontroller programs to high-performance server applications. Its name comes from one of nature’s most extraordinary athletes: the swift, a bird that can reach speeds of <a href="https://www.birdlife.org/news/2024/08/23/migratory-bird-of-the-month-the-common-swift">69 mph (111 km/h)</a>. These aerial marvels migrate as far as <a href="https://www.lancswt.org.uk/blog/fascinating-facts-about-swifts-and-how-you-can-help-them">14,000 miles (22,000 km)</a> each year, spending months on the wing and almost never touching down.</p> 
+      <p>But while the language continues to thrive, the bird that inspired its name is in trouble. In the UK, swift numbers have <a href="https://www.rspb.org.uk/birds-and-wildlife/swift">plummeted by 66%</a> in the past 30 years, and swift species are globally threatened— including the Endangered <a href="https://datazone.birdlife.org/species/factsheet/mariana-swiftlet-aerodramus-bartschi">Mariana Swiftlet</a> and Vulnerable <a href="https://datazone.birdlife.org/species/factsheet/chimney-swift-chaetura-pelagica">Chimney Swift</a>.</p> 
+      <p>By helping protect these remarkable birds, we’re not only preserving the namesake of our chosen language, but also safeguarding a vital part of our shared natural heritage. Explore below for ways you can support swift conservation—and help keep the skies alive for generations to come.</p> 
+      <p></p>
+      <h3 style="padding-top: 20px; padding-bottom: 20px">How you can help swifts</h3>
+      <div id="carousel5wS5B" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" class="active btn" data-bs-target="#carousel5wS5B" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" class="btn" data-bs-target="#carousel5wS5B" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" class="btn" data-bs-target="#carousel5wS5B" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" class="btn" data-bs-target="#carousel5wS5B" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" style="background-color: black">
+            <img src="/images/swift.jpg" alt="" class="d-block w-100" style="height: 100%; object-fit: cover; opacity: 1" />
+            <div class="container">
+              <div class="carousel-caption">
+                <div class="card">
+                  <div class="card-header">
+                    Help conservation efforts
+                  </div>
+                  <div class="card-body">
+                    <p class="card-text">Help to fund crucial nature conservation projects</p>
+                    <a href="https://www.justgiving.com/page/swiftforswifts" class="card-link btn btn-primary">Donate now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item" style="background-color: black">
+            <img src="/images/wildflowers.jpg" alt="" class="d-block w-100" style="height: 100%; object-fit: cover; opacity: 1" />
+            <div class="container">
+              <div class="carousel-caption">
+                <div class="card">
+                  <div class="card-header">
+                    Take action
+                  </div>
+                  <div class="card-body">
+                    <p class="card-text">Simple actions you take locally can help protect swifts and the habitats they need to survive.</p>
+                    <a href="/action" class="card-link btn btn-primary">Start Helping Swifts Today</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item" style="background-color: black">
+            <img src="/images/reserve.jpg" alt="" class="d-block w-100" style="height: 100%; object-fit: cover; opacity: 1" />
+            <div class="container">
+              <div class="carousel-caption">
+                <div class="card">
+                  <div class="card-header">
+                    Get involved
+                  </div>
+                  <div class="card-body">
+                    <p class="card-text">Find out who is helping swifts where you are</p>
+                    <a href="/involved" class="card-link btn btn-primary">Join a local organisation</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item" style="background-color: black">
+            <img src="/images/code.jpg" alt="" class="d-block w-100" style="height: 100%; object-fit: cover; opacity: 1" />
+            <div class="container">
+              <div class="carousel-caption">
+                <div class="card">
+                  <div class="card-header">
+                    Spread the word
+                  </div>
+                  <div class="card-body">
+                    <p class="card-text">Show support for swifts in your code projects</p>
+                    <a href="/support" class="card-link btn btn-primary">Show support</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="carousel-control-prev btn" data-bs-target="#carousel5wS5B" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button>
+        <button type="button" class="carousel-control-next btn" data-bs-target="#carousel5wS5B" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></button>
+      </div>
+    </div>
+    <div class="text-center ig-text-xSmall mt-5 mb-2 vstack gap-2">
+      <p class="ig-text-xxxSmall mb-0 align-self-center">Swift and the Swift logo are trademarks of Apple Inc.</p>
+      <p class="mb-0 align-self-center">Licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;" /><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;" /><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;" /></p>
+      <p class="mb-0 align-self-center">Created in Swift with <a rel="noopener" href="https://github.com/twostraws/Ignite">Ignite</a></p>
+    </div>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/ignite-core.js"></script>
+  </body>
+</html>

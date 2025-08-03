@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Swift For Swifts" />
+    <meta name="generator" content="Ignite v0.6.0" />
+    <title>Get involved – Swift For Swifts</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="/css/ignite-core.min.css" rel="stylesheet" />
+    <link href="https://www.swiftforswifts.org/involved" rel="canonical" />
+    <script>(function() {
+    function getThemePreference() {
+        return localStorage.getItem('custom-theme') || 'auto';
+    }
+
+    function applyTheme(themeID) {
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const lightThemeID = document.documentElement.getAttribute('data-light-theme') || 'light';
+        const darkThemeID = document.documentElement.getAttribute('data-dark-theme') || 'dark';
+        const actualThemeID = themeID === 'auto' ? (prefersDark ? darkThemeID : lightThemeID) : themeID;
+
+        document.documentElement.setAttribute('data-bs-theme', actualThemeID);
+        document.documentElement.setAttribute('data-theme-state', themeID);
+    }
+
+    function applySyntaxTheme() {
+        const syntaxTheme = getComputedStyle(document.documentElement)
+            .getPropertyValue('--syntax-highlight-theme').trim().replace(/"/g, '');
+
+        if (!syntaxTheme) return;
+
+        document.querySelectorAll('link[data-highlight-theme]').forEach(link => {
+            link.setAttribute('disabled', 'disabled');
+        });
+
+        const themeLink = document.querySelector(`link[data-highlight-theme="${syntaxTheme}"]`);
+        if (themeLink) {
+            themeLink.removeAttribute('disabled');
+        }
+    }
+
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        const currentTheme = getThemePreference();
+        if (currentTheme === 'auto') {
+            applyTheme('auto');
+            applySyntaxTheme();
+        }
+    });
+
+    const savedTheme = getThemePreference();
+    applyTheme(savedTheme);
+    applySyntaxTheme();
+})();
+</script>
+    <meta property="og:site_name" content="Swift For Swifts" />
+    <meta property="og:title" content="Get involved" />
+    <meta name="twitter:title" content="Get involved" />
+    <meta property="og:url" content="https://www.swiftforswifts.org/involved" />
+    <meta name="twitter:domain" content="swiftforswifts.org" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:dnt" content="on" />
+  </head>
+  <body style="background-color: rgb(240 248 255 / 100%);" class="container">
+    <header>
+      <nav class="fixed-top material-thick navbar navbar-expand-md">
+        <div class="container flex-wrap flex-lg-nowrap">
+          <div class="me-2 me-md-auto">
+            <a href="/" class="d-inline-flex align-items-center navbar-brand">Swift for Swifts</a>
+          </div>
+          <button type="button" class="navbar-toggler btn" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="navbar-nav mb-2 mb-md-0 col justify-content-end">
+              <li class="nav-item"><a href="/donate" class="nav-link text-nowrap">Donate</a></li>
+              <li class="nav-item"><a href="/action" class="nav-link text-nowrap">Take Action</a></li>
+              <li class="nav-item"><a href="/involved" class="nav-link active text-nowrap" aria-current="page">Get involved</a></li>
+              <li class="nav-item"><a href="/support" class="nav-link text-nowrap">Show support</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="ig-main-content">
+      <div style="width: 100vw; margin-inline: calc(50% - 50vw); padding-bottom: 20px; display: grid">
+        <div class="mb-0 vstack" style="width: 100.0vw; height: 60.0vh; overflow: hidden; position: relative; grid-area: 1/1; z-index: 0; align-self: flex-end; justify-self: center">
+          <img src="/images/reserve.jpg" alt="" class="img-fluid w-100 h-100 object-fit-cover mb-0 align-self-center" style="object-position: 50% 50%" />
+        </div>
+        <div class="material-thick mb-0 vstack" style="width: 100%; max-width: 100.0vw; position: relative; grid-area: 1/1; z-index: 1; align-self: flex-end; justify-self: center">
+          <p class="p-1 mb-0 align-self-center" style="font-weight: 400; font-size: 3.0em">Get involved for Swifts</p>
+        </div>
+      </div>
+      <p class="lead" style="margin-top: 20px; margin-bottom: 20px">Around the world, conservation groups are acting to protect swifts and their habitats. Find a group making an impact near you.</p>
+      <div id="accordionc2gdC" class="accordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header"><button type="button" class="accordion-button collapsed btn" data-bs-toggle="collapse" data-bs-target="#accordionc2gdC-itemP9XO7" aria-expanded="false" aria-controls="accordionc2gdC-itemP9XO7">International</button></h2>
+          <div id="accordionc2gdC-itemP9XO7" class="accordion-collapse collapse" data-bs-parent="#accordionc2gdC">
+            <div class="accordion-body">
+              <ul>
+                <li><a rel="noopener" href="https://www.birdlife.org" class="m-0">Birdlife International</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header"><button type="button" class="accordion-button collapsed btn" data-bs-toggle="collapse" data-bs-target="#accordionc2gdC-itempw4sF" aria-expanded="false" aria-controls="accordionc2gdC-itempw4sF">Australia</button></h2>
+          <div id="accordionc2gdC-itempw4sF" class="accordion-collapse collapse" data-bs-parent="#accordionc2gdC">
+            <div class="accordion-body">
+              <ul>
+                <li><a rel="noopener" href="https://www.australianwildlife.org" class="m-0">Australian Wildlife Conservancy</a></li>
+                <li><a rel="noopener" href="https://www.conservationvolunteers.com.au" class="m-0">Conservation Volunteers Australia</a></li>
+                <li><a rel="noopener" href="https://birdlife.org.au" class="m-0">Birdlife Australia</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header"><button type="button" class="accordion-button collapsed btn" data-bs-toggle="collapse" data-bs-target="#accordionc2gdC-itemakd7a" aria-expanded="false" aria-controls="accordionc2gdC-itemakd7a">Austria</button></h2>
+          <div id="accordionc2gdC-itemakd7a" class="accordion-collapse collapse" data-bs-parent="#accordionc2gdC">
+            <div class="accordion-body">
+              <ul>
+                <li><a rel="noopener" href="https://www.birdlife.at" class="m-0">BirdLife Austria</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header"><button type="button" class="accordion-button collapsed btn" data-bs-toggle="collapse" data-bs-target="#accordionc2gdC-itemdGtrW" aria-expanded="false" aria-controls="accordionc2gdC-itemdGtrW">China</button></h2>
+          <div id="accordionc2gdC-itemdGtrW" class="accordion-collapse collapse" data-bs-parent="#accordionc2gdC">
+            <div class="accordion-body">
+              <a rel="noopener" href="https://wildbeijing.org/the-beijing-swift-project/">Wild Beijing – Beijing Swift project</a>
+              <a rel="noopener" href="https://www.hkbws.org.hk">Hong Kong Bird Watching Society</a>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header"><button type="button" class="accordion-button collapsed btn" data-bs-toggle="collapse" data-bs-target="#accordionc2gdC-itemTDtmJ" aria-expanded="false" aria-controls="accordionc2gdC-itemTDtmJ">Germany</button></h2>
+          <div id="accordionc2gdC-itemTDtmJ" class="accordion-collapse collapse" data-bs-parent="#accordionc2gdC">
+            <div class="accordion-body">
+              <ul>
+                <li><a rel="noopener" href="https://www.nabu.de" class="m-0">Nature and Biodiversity Conservation Union</a></li>
+                <li><a rel="noopener" href="https://www.lbv.de" class="m-0">LBV</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header"><button type="button" class="accordion-button collapsed btn" data-bs-toggle="collapse" data-bs-target="#accordionc2gdC-itemoeg1K" aria-expanded="false" aria-controls="accordionc2gdC-itemoeg1K">India</button></h2>
+          <div id="accordionc2gdC-itemoeg1K" class="accordion-collapse collapse" data-bs-parent="#accordionc2gdC">
+            <div class="accordion-body">
+              <ul>
+                <li><a rel="noopener" href="https://www.wti.org.in" class="m-0">Wildlife Trust of India</a></li>
+                <li><a rel="noopener" href="https://www.bnhs.org" class="m-0">Bombay Natural History Society</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header"><button type="button" class="accordion-button collapsed btn" data-bs-toggle="collapse" data-bs-target="#accordionc2gdC-itemG03SK" aria-expanded="false" aria-controls="accordionc2gdC-itemG03SK">Spain</button></h2>
+          <div id="accordionc2gdC-itemG03SK" class="accordion-collapse collapse" data-bs-parent="#accordionc2gdC">
+            <div class="accordion-body">
+              <ul>
+                <li><a href="https://www.seo.org" class="m-0">Sociedad Española de Ornitología</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header"><button type="button" class="accordion-button collapsed btn" data-bs-toggle="collapse" data-bs-target="#accordionc2gdC-itemcprl6" aria-expanded="false" aria-controls="accordionc2gdC-itemcprl6">Switzerland</button></h2>
+          <div id="accordionc2gdC-itemcprl6" class="accordion-collapse collapse" data-bs-parent="#accordionc2gdC">
+            <div class="accordion-body">
+              <ul>
+                <li><a href="https://www.birdlife.ch" class="m-0">BirdLife Schweiz</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header"><button type="button" class="accordion-button collapsed btn" data-bs-toggle="collapse" data-bs-target="#accordionc2gdC-item6TpOT" aria-expanded="false" aria-controls="accordionc2gdC-item6TpOT">Turkey</button></h2>
+          <div id="accordionc2gdC-item6TpOT" class="accordion-collapse collapse" data-bs-parent="#accordionc2gdC">
+            <div class="accordion-body">
+              <ul>
+                <li><a href="https://www.dogadernegi.org" class="m-0">Doğa Derneği</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header"><button type="button" class="accordion-button collapsed btn" data-bs-toggle="collapse" data-bs-target="#accordionc2gdC-itemnosEI" aria-expanded="false" aria-controls="accordionc2gdC-itemnosEI">United Kingdom</button></h2>
+          <div id="accordionc2gdC-itemnosEI" class="accordion-collapse collapse" data-bs-parent="#accordionc2gdC">
+            <div class="accordion-body">
+              <ul>
+                <li><a rel="noopener" href="https://www.rspb.org.uk" class="m-0">Royal Society for the Protection of Birds</a></li>
+                <li><a rel="noopener" href="https://www.swift-conservation.org" class="m-0">Swift Conservation</a></li>
+                <li><a rel="noopener" href="https://www.wwt.org.uk" class="m-0">Wildfowl and Wetlands Trust</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header"><button type="button" class="accordion-button collapsed btn" data-bs-toggle="collapse" data-bs-target="#accordionc2gdC-itemNXxx6" aria-expanded="false" aria-controls="accordionc2gdC-itemNXxx6">United States</button></h2>
+          <div id="accordionc2gdC-itemNXxx6" class="accordion-collapse collapse" data-bs-parent="#accordionc2gdC">
+            <div class="accordion-body">
+              <ul>
+                <li><a rel="noopener" href="https://www.birds.cornell.edu/home" class="m-0">Cornell Lab of Ornithology</a></li>
+                <li><a rel="noopener" href="http://www.chimneyswifts.org" class="m-0">Chimney Swift Conservation Association</a></li>
+                <li><a rel="noopener" href="https://www.audubon.org" class="m-0">Audubon</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center ig-text-xSmall mt-5 mb-2 vstack gap-2">
+      <p class="ig-text-xxxSmall mb-0 align-self-center">Swift and the Swift logo are trademarks of Apple Inc.</p>
+      <p class="mb-0 align-self-center">Licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;" /><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;" /><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;" /></p>
+      <p class="mb-0 align-self-center">Created in Swift with <a rel="noopener" href="https://github.com/twostraws/Ignite">Ignite</a></p>
+    </div>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/ignite-core.js"></script>
+  </body>
+</html>
