@@ -13,6 +13,6 @@ let package = Package(
         .executableTarget(
             name: "SwiftForSwifts",
             dependencies: ["Ignite"],
-            path: "Sources",
+            path: "Sources")
     ]
 )
