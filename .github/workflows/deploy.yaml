@@ -1,0 +1,57 @@
+name: Build and Deploy Swift Static Site
+
+on:
+  push:
+    branches: ["main"]
+
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: macos-15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Cache SwiftPM dependencies
+        uses: actions/cache@v4
+        with:
+          key: xcode-${{ runner.os }}-${{ hashFiles('Package.resolved') }}
+          restore-keys: xcode-${{ runner.os }}-
+          path: .build/DerivedData/SourcePackages
+
+      - name: Build scheme
+        run: |
+          xcodebuild -scheme SwiftForSwifts \
+            -configuration Release \
+            -sdk macosx \
+            -destination 'platform=macOS' \
+            -derivedDataPath .build/DerivedData
+
+      - name: Build site
+        run: .build/DerivedData/Build/Products/Release/SwiftForSwifts
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './Build'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
