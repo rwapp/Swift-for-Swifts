@@ -11,7 +11,7 @@ struct Donate: StaticPage {
     var title = "Donate"
 
     var body: some HTML {
-        Header(imageURL: "/images/swift-header.jpg", title: "Make a donation for Swifts")
+        Header(imageURL: "/images/swift.jpg", title: "Make a donation for Swifts")
 
         Text("BirdLife International is a global leader in bird and habitat conservation, working across continents to protect the planet’s biodiversity.")
             .font(.lead)
