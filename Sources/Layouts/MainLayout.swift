@@ -10,6 +10,5 @@ struct MainLayout: Layout {
             
             SwiftFooter()
         }
-        .background(Color.aliceBlue)
     }
 }
