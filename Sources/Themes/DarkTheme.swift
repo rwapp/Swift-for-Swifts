@@ -11,22 +11,29 @@ import Ignite
 struct DarkTheme: BaseTheme {
     let colorScheme = Ignite.ColorScheme.dark
 
-    var accent = Color(hex: "#59C2F6")
-    var secondaryAccent = Color(hex: "#56B88A")
-    var success = Color(hex: "#56C89A")
-    var info = Color(hex: "#78D2FF")
-    var warning = Color(hex: "#FFD35A")
-    var danger = Color(hex: "#FF6B73")
-    var offWhite = Color(hex: "#E6EEF9")
-    var offBlack = Color(hex: "#0B1220")
-    var primary = Color(hex: "#E6EEF9")
+    var accent = Color(hex: "#F6AF41")
+    var secondaryAccent = Color(hex: "#759992")
+    var success = Color(hex: "#78C9B3")
+    var info = Color(hex: "#93D7E0")
+    var warning = Color(hex: "#F6AF41")
+    var danger = Color(hex: "#FF7B6E")
+
+    var offWhite = Color(hex: "#FFFCED")
+    var offBlack = Color(hex: "#0A1412")
+
+    var primary = Color(hex: "#FFFCED")
     var emphasis = Color(hex: "#FFFFFF")
-    var secondary = Color(hex: "#A3B7D6")
-    var tertiary = Color(hex: "#8BA0C0")
-    var background = Color(hex: "#0B1220")
-    var secondaryBackground = Color(hex: "#101A33")
-    var tertiaryBackground = Color(hex: "#0E1A2B")
-    var link = Color(hex: "#59C2F6")
-    var hoveredLink = Color(hex: "#7AD3FF")
-    var border = Color(hex: "#1F2B4A")
+    var secondary = Color(hex: "#BBD3CD")
+    var tertiary = Color(hex: "#6E8F89")
+
+    var background = Color(hex: "#0A1412")
+    var secondaryBackground = Color(hex: "#112421")
+    var tertiaryBackground = Color(hex: "#0C1816")
+
+    var link = Color(hex: "#F6AF41")
+    var hoveredLink = Color(hex: "#FFCA73")
+    var border = Color(hex: "#1F2B28")
+
+    var accentSurface = Color(hex: "#F6AF41")
+    var onAccent = Color(hex: "#0A1412")
 }

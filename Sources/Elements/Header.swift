@@ -37,10 +37,11 @@ struct Header: HTML {
                     Code(subtitle)
                         .font(.title5)
                         .padding(.bottom, .xSmall)
+                        .foregroundStyle(.info)
                 }
             }
             .frame(maxWidth: .vw(100%))
-            .background(.thickMaterial)
+            .background(.ultraThickMaterial)
         }
         .ignorePageGutters()
         .padding(.bottom)

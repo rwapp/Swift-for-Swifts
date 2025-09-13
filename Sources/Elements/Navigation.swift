@@ -17,6 +17,6 @@ struct Navigation: HTML {
         }
         .navigationItemAlignment(.trailing)
         .position(.fixedTop)
-        .background(.thickMaterial)
+        .background(.ultraThickMaterial)
     }
 }

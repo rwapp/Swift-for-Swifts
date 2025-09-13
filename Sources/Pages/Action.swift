@@ -19,7 +19,7 @@ struct Action: StaticPage {
         .margin(.vertical)
 
         Card {
-            "Growing native vegetation supports insects, which in turn feed swifts. FWhether you have a garden, balcony pots, or access to shared space, there are always ways to make your space greener. If you don't have outdoor space, look out for your local community garden, or maybe even consider 'flower bombing' some nearby empty land. If you’re unsure what to grow, checkin  with local nature organisations for plants that are recommended in your area. And if you are growing, be sure to stay away from pesticides that kill off the insects that swifts hunt."
+            "Growing native vegetation supports insects, which in turn feed swifts. Whether you have a garden, balcony pots, or access to shared space, there are always ways to make your space greener. If you don't have outdoor space, look out for your local community garden, or maybe even consider 'flower bombing' some nearby empty land. If you’re unsure what to grow, checkin  with local nature organisations for plants that are recommended in your area. And if you are growing, be sure to stay away from pesticides that kill off the insects that swifts hunt."
         } header: {
             "<h4>Grow native insect-friendly plants</h4>"
         }
@@ -54,6 +54,17 @@ struct Action: StaticPage {
             " to find a group making an impact near you."
         } header: {
             "<h4>Join a local conservation organisation</h4>"
+        }
+        .margin(.vertical)
+
+        Card {
+            "Show your project supports swifts by displaying a "
+
+            Link("badge", target: Support())
+
+            ", linking to <a href=\"/\">swiftforswifts.org</a> and using the hashtag #SwiftForSwifts"
+        } header: {
+            "<h4>Share the word</h4>"
         }
         .margin(.vertical)
 
