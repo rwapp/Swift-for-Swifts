@@ -106,6 +106,8 @@ struct Involved: StaticPage {
                         .relationship(.noOpener)
                     Link("Audubon", target: "https://www.audubon.org")
                         .relationship(.noOpener)
+                    Link("Michigan Audubon", target: "https://www.michiganaudubon.org/bfc/chsw/")
+                        .relationship(.noOpener)
                 }
             }
         }
