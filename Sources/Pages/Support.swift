@@ -17,15 +17,15 @@ struct Support: StaticPage {
             .font(.lead)
             .margin(.vertical)
 
-        Text("Badge")
+        Text("Social Media")
             .font(.title5)
 
         Text {
-            "<a href=\"/downloads/swift-for-swifts.png\" download>Download</a> a badge to your indie app, website, or social media and use it to link to "
+            "<a href=\"/downloads/swift-for-swifts.png\" download>Download</a> a badge to share on social media. Remember to add a link to "
 
             Link("swiftforswifts.org", target: "/")
 
-            ". If you share the project on social media, be sure to use the hashtag #SwiftForSwifts"
+            " and use the hashtag #SwiftForSwifts"
         }
 
         Image("/images/swift-for-swifts-badge.png", description: "Swift for Swifts badge")
@@ -33,16 +33,56 @@ struct Support: StaticPage {
             .frame(width: .percent(25%))
             .padding(.vertical)
 
-        Text("Git project badge")
+        Text("Website Footer")
+            .font(.title5)
+            .padding(.top)
+
+        Text("Add a footer link to your website using our sample code.")
+
+        SwiftsFooter()
+
+        Text {
+            "Swift code for use with the "
+            Link("Ignite", target: URL(static: "https://github.com/twostraws/Ignite"))
+                .relationship(.noOpener)
+            " static page generator."
+        }
+
+        CodeBlock(.swift) {
+"""
+    private var swiftsFooter: some HTML {
+        Text {
+            Image(decorative: "https://swiftforswifts.org/downloads/swift-for-swifts-icon.png")
+                .resizable()
+                .frame(height: .em(2.0))
+                .padding(.trailing)
+
+            Link("Supporting Swift for Swifts", target: "https://swiftforswifts.org/")
+                .target(.newWindow)
+                .relationship(.noOpener)
+        }
+    }
+"""
+        }
+
+        Text("HTML")
+
+        CodeBlock(.swift) {
+        """
+        &lt;p&gt;&lt;img src="https://swiftforswifts.org/downloads/swift-for-swifts-icon.png" alt="" class="img-fluid" style="height: 2.0em; padding-right: 20px" /&gt;&lt;a target="_blank" rel="noopener" href="https://swiftforswifts.org/"&gt;Supporting Swift for Swifts&lt;/a&gt;&lt;/p&gt;
+        """
+        }
+
+        Text("Git project")
             .font(.title5)
             .padding(.top)
 
         Text("Add a badge to your open source repo by adding this markdown into your README<br>")
 
-        Code("[![Swift for Swifts](https://img.shields.io/badge/SWIFT-FOR%20SWIFTS-F6AF41?style=flat&labelColor=476B64&logo=swift&logoColor=F6AF41)](https://swiftforswifts.org)")
-            .foregroundStyle(.info)
+        Image("https://img.shields.io/badge/SWIFT-FOR%20SWIFTS-F6AF41?style=flat&labelColor=476B64&logo=swift&logoColor=F6AF41", description: "Swift for Swifts github style badge")
+            .padding(.bottom, .small)
 
-        Image("https://img.shields.io/badge/SWIFT-FOR%20SWIFTS-F6AF41?style=flat&labelColor=476B64&logo=swift&logoColor=F6AF41")
-            .padding(.vertical)
+        CodeBlock(.swift) { "[![Swift for Swifts](https://img.shields.io/badge/SWIFT-FOR%20SWIFTS-F6AF41?style=flat&labelColor=476B64&logo=swift&logoColor=F6AF41)](https://swiftforswifts.org)"
+        }
     }
 }

@@ -24,6 +24,8 @@ Licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-N
                 Link("Ignite", target: URL(static: "https://github.com/twostraws/Ignite"))
                     .relationship(.noOpener)
             }
+
+            SwiftsFooter()
         }
         .horizontalAlignment(.center)
         .font(.xSmall)
