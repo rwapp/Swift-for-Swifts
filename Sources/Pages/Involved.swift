@@ -8,7 +8,7 @@
 import Ignite
 
 struct Involved: StaticPage {
-    var title = "Get involved"
+    var title = "Get Involved"
 
     var body: some HTML {
         Header(imageURL: "/images/reserve.jpg", title: "Get involved for Swifts")

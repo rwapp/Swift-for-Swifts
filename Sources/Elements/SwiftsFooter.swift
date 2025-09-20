@@ -17,7 +17,7 @@ struct SwiftsFooter: HTML {
             Image(decorative: "https://swiftforswifts.org/downloads/swift-for-swifts-icon.png")
                 .resizable()
                 .frame(height: .em(2.0))
-                .padding(.trailing)
+                .padding(.trailing, .small)
 
             Link("Supporting Swift for Swifts", target: "https://swiftforswifts.org/")
                 .target(.newWindow)

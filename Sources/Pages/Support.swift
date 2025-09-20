@@ -8,7 +8,7 @@
 import Ignite
 
 struct Support: StaticPage {
-    var title = "Donate"
+    var title = "Show Support"
 
     var body: some HTML {
         Header(imageURL: "/images/code.jpg", title: "Show your project supports Swifts")
@@ -25,7 +25,16 @@ struct Support: StaticPage {
 
             Link("swiftforswifts.org", target: "/")
 
-            " and use the hashtag #SwiftForSwifts"
+            " and use the hashtag #SwiftForSwifts.<br>Here's an example post:"
+        }
+
+        Quote {
+"""
+            Swift is thriving. But the birds are disappearing.
+            The name of our favorite programming language comes from one of nature’s fastest flyers, yet swift populations have dropped dramatically.
+            Let’s protect the story behind our craft. Learn how you can help at https://swiftforswifts.org 🐦‍⬛
+            #SwiftForSwifts
+"""
         }
 
         Image("/images/swift-for-swifts-badge.png", description: "Swift for Swifts badge")
@@ -50,12 +59,12 @@ struct Support: StaticPage {
 
         CodeBlock(.swift) {
 """
-    private var swiftsFooter: some HTML {
+private var swiftsFooter: some HTML {
         Text {
             Image(decorative: "https://swiftforswifts.org/downloads/swift-for-swifts-icon.png")
                 .resizable()
                 .frame(height: .em(2.0))
-                .padding(.trailing)
+                .padding(.trailing, .small)
 
             Link("Supporting Swift for Swifts", target: "https://swiftforswifts.org/")
                 .target(.newWindow)
@@ -69,7 +78,7 @@ struct Support: StaticPage {
 
         CodeBlock(.swift) {
         """
-        &lt;p&gt;&lt;img src="https://swiftforswifts.org/downloads/swift-for-swifts-icon.png" alt="" class="img-fluid" style="height: 2.0em; padding-right: 20px" /&gt;&lt;a target="_blank" rel="noopener" href="https://swiftforswifts.org/"&gt;Supporting Swift for Swifts&lt;/a&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;img src="https://swiftforswifts.org/downloads/swift-for-swifts-icon.png" alt="" class="img-fluid" style="height: 2.0em; padding-right: 10px" /&gt;&lt;a target="_blank" rel="noopener" href="https://swiftforswifts.org/"&gt;Supporting Swift for Swifts&lt;/a&gt;&lt;/p&gt;
         """
         }
 
