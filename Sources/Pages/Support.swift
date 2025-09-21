@@ -25,7 +25,17 @@ struct Support: StaticPage {
 
             Link("swiftforswifts.org", target: "/")
 
-            " and use the hashtag #SwiftForSwifts.<br>Here's an example post:"
+            " and use the hashtag #SwiftForSwifts. If you're sharing on "
+
+            Link("BlueSky", target: URL(static: "https://bsky.app/profile/swiftforswifts.bsky.social"))
+                .relationship(.noOpener)
+
+            " or "
+
+            Link("Mastodon", target: URL(static: "https://mastodon.social/@SwiftForSwifts"))
+                .relationship(.noOpener)
+
+            " make sure you tag us @swiftforswifts.<br>Here's an example post:"
         }
 
         Quote {
