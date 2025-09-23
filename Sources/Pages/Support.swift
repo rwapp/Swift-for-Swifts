@@ -52,6 +52,19 @@ struct Support: StaticPage {
             .frame(width: .percent(25%))
             .padding(.vertical)
 
+        Text("Swift app")
+            .font(.title5)
+            .padding(.top)
+
+        Text {
+            "Add a link or badge to your Swift iOS, macOS, VisionOS, tvOS, or watchOS app with our "
+            
+            Link("'Swifts Package'", target: URL(static: "https://github.com/Swift-for-Swifts/SwiftsPackage"))
+                .relationship(.noOpener)
+            
+            "."
+        }
+
         Text("Website Footer")
             .font(.title5)
             .padding(.top)
